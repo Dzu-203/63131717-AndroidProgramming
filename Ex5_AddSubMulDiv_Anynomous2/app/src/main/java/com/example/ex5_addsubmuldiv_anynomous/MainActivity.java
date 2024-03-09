@@ -1,4 +1,4 @@
-package com.example.ex4_addsubmuldiv_onclick;
+package com.example.ex5_addsubmuldiv_anynomous;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +17,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addInit();
+        btnCong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleCong();
+            }
+        });
+        btnTru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleTru();
+            }
+        });
+        btnNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleNhan();
+            }
+        });
+        btnChia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleChia();
+            }
+        });
+
     }
 
     private void addInit() {
@@ -28,22 +53,22 @@ public class MainActivity extends AppCompatActivity {
         btnNhan = findViewById(R.id.btnnhan);
         btnChia = findViewById(R.id.btnchia);
     }
-    public void handleCong(View v){
+    public void handleCong(){
         double a = Double.parseDouble(edta.getText().toString());
         double b = Double.parseDouble(edtb.getText().toString());
         edtresult.setText(String.valueOf(a+b));
     }
-    public void handleTru(View v){
+    public void handleTru(){
         double a = Double.parseDouble(edta.getText().toString());
         double b = Double.parseDouble(edtb.getText().toString());
         edtresult.setText(String.valueOf(a-b));
     }
-    public void handleNhan(View v){
+    public void handleNhan(){
         double a = Double.parseDouble(edta.getText().toString());
         double b = Double.parseDouble(edtb.getText().toString());
         edtresult.setText(String.valueOf(a*b));
     }
-    public void handleChia(View v){
+    public void handleChia(){
         double a = Double.parseDouble(edta.getText().toString());
         double b = Double.parseDouble(edtb.getText().toString());
         if (b == 0){
