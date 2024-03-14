@@ -58,15 +58,26 @@ public class MainActivity extends AppCompatActivity {
         btnSua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                boolean check = false;
                 String data = edtCourse.getText().toString();
                 if (data.isEmpty()){
                     Toast.makeText(MainActivity.this,"Vui lòng nhập tên khóa học cần sửa",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    listCourses.remove(data);
-                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                    intent.putExtra("key",data);
-                    startActivityForResult(intent,99);
+                    for (int i = 0; i < listCourses.size();i++){
+                        if (data.equals(listCourses.get(i))){
+                            check = true;
+                            listCourses.remove(data);
+                            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                            intent.putExtra("key",data);
+                            startActivityForResult(intent,99);
+                        }else {
+                            check = false;
+                        }
+                    }
+                    if (!check){
+                        Toast.makeText(MainActivity.this,"Không có tên trong list vui lòng xem lại!!",Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
