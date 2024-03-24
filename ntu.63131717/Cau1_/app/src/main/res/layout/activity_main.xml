@@ -85,7 +85,6 @@
     </LinearLayout>
     <TextView
         android:layout_marginTop="40dp"
-        android:text="Hiển thị kết quả"
         android:id="@+id/txtHienThi"
         android:padding="8dp"
         android:layout_gravity="center"
