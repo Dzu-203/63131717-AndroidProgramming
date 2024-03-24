@@ -37,7 +37,7 @@ public class CustomAdapter extends ArrayAdapter<Cake> {
         TextView nameCake = convertView.findViewById(R.id.txtNameCake);
         nameCake.setText(listCake.getName());
         TextView coinCake = convertView.findViewById(R.id.txtCoinCake);
-        nameCake.setText(listCake.getCoin());
+        coinCake.setText(String.valueOf(listCake.getCoin() + "đ"));
         return convertView;
     }
 }

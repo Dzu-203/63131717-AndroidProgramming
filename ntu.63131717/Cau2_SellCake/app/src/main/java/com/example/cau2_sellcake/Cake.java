@@ -3,9 +3,9 @@ package com.example.cau2_sellcake;
 public class Cake {
     private int img;
     private String name;
-    private String coin;
+    private int coin;
 
-    public Cake(int img, String name, String coin) {
+    public Cake(int img, String name, int coin) {
         this.img = img;
         this.name = name;
         this.coin = coin;
@@ -27,11 +27,11 @@ public class Cake {
         this.name = name;
     }
 
-    public String getCoin() {
+    public int getCoin() {
         return coin;
     }
 
-    public void setCoin(String coin) {
+    public void setCoin(int coin) {
         this.coin = coin;
     }
 }
