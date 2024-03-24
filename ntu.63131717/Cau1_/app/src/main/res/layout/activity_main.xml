@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
 
-
     <LinearLayout
         android:padding="30dp"
         android:layout_marginBottom="30dp"
+        android:background="@drawable/custom_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -22,6 +22,7 @@
             android:src="@drawable/logo" />
 
         <TextView
+            android:textColor="@color/black"
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="49dp"
@@ -39,8 +40,10 @@
         android:orientation="horizontal">
 
         <EditText
+            android:hint="0"
+            android:padding="8dp"
             android:id="@+id/edtCurrency1"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number" />
@@ -65,8 +68,10 @@
         android:orientation="horizontal">
 
         <EditText
+            android:hint="0"
             android:id="@+id/edtCurrency2"
-            android:layout_width="300dp"
+            android:padding="8dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
 
@@ -82,9 +87,12 @@
         android:layout_marginTop="40dp"
         android:text="Hiển thị kết quả"
         android:id="@+id/txtHienThi"
+        android:padding="8dp"
+        android:layout_gravity="center"
         android:textAlignment="center"
         android:textSize="20dp"
-        android:layout_width="match_parent"
+        
+        android:layout_width="200dp"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
