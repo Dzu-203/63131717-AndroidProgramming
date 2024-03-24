@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -56,16 +57,21 @@ public class MainActivity extends AppCompatActivity {
     }
     public void convertCurrency(){
         double currencyC = Double.parseDouble(edtCr1.getText().toString());
+        if (String.valueOf(currencyC).equals("")){
+            Toast.makeText(MainActivity.this,"Vui lòng nhập số tiền cần qui đổi",Toast.LENGTH_SHORT).show();
+        }
         double rate = 0;
         String currency1 = String.valueOf(spinner1.getSelectedItem());
         String currency2 = String.valueOf(spinner2.getSelectedItem());
+
         if (currency1.equals("USD") && currency2.equals("VNĐ")){
             rate = currencyC * 25000;
             txtHienThi.setText(String.format("%s USD = %s VNĐ",currencyC,rate));
         }else if (currency1.equals("VNĐ") && currency2.equals("USD")) {
             rate = currencyC / 25000;
             txtHienThi.setText(String.format("%s VNĐ = %s USD",currencyC,rate));
-        }else {
+        }
+        else {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Thông báo");
             builder.setIcon(R.drawable.logo);
@@ -77,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             builder.show();
+            edtCr2.setText("");
         }
         edtCr2.setText(String.valueOf(rate));
 
