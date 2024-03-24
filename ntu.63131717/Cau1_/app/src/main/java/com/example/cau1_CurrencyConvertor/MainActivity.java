@@ -1,7 +1,9 @@
 package com.example.cau1_CurrencyConvertor;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -29,26 +31,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addInit();
-
-        spinner1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                convertCurrency();
-            }
-        });
-        spinner2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                convertCurrency();
-            }
-        });
-
         imageConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 convertCurrency();
             }
         });
+
     }
 
     private void addInit() {
@@ -67,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void convertCurrency(){
         double currencyC = Double.parseDouble(edtCr1.getText().toString());
-        double rate;
+        double rate = 0;
         String currency1 = String.valueOf(spinner1.getSelectedItem());
         String currency2 = String.valueOf(spinner2.getSelectedItem());
         if (currency1.equals("USD") && currency2.equals("VNĐ")){
@@ -76,7 +65,20 @@ public class MainActivity extends AppCompatActivity {
         }else if (currency1.equals("VNĐ") && currency2.equals("USD")) {
             rate = currencyC / 25000;
             txtHienThi.setText(String.format("%s VNĐ = %s USD",currencyC,rate));
+        }else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Thông báo");
+            builder.setIcon(R.drawable.logo);
+            builder.setMessage("Vui lòng xem lại tiền tệ chuyển đổi !!");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            builder.show();
         }
+        edtCr2.setText(String.valueOf(rate));
 
     }
 }
