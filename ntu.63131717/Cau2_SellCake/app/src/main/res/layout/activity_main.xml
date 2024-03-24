@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
@@ -29,6 +29,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSearch"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="Search" />
@@ -36,15 +37,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/btnSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@android:drawable/ic_menu_search" />
     </LinearLayout>
 
     <GridView
-        android:numColumns="2"
+        android:id="@+id/gv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:numColumns="2" />
 
 </LinearLayout>
