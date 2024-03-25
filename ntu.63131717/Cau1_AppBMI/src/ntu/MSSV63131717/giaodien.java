@@ -57,7 +57,7 @@ public class giaodien extends JFrame {
         panel.setBounds(0, 0, 434, 61);
         contentPane.add(panel);
 
-        JLabel lblNewLabel = new JLabel("Tinh chi so BMI");
+        JLabel lblNewLabel = new JLabel("Calculate BMI");
         lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
         lblNewLabel.setForeground(Color.WHITE);
         lblNewLabel.setBackground(Color.WHITE);
@@ -101,7 +101,7 @@ public class giaodien extends JFrame {
                 System.exit(0);
             }
         });
-        btnNewButton.setBounds(335, 186, 89, 23);
+        btnNewButton.setBounds(291, 186, 89, 23);
         panel_1.add(btnNewButton);
 
         JButton btnClear = new JButton("Clear");
@@ -112,7 +112,7 @@ public class giaodien extends JFrame {
                 textField_2.setText("");
             }
         });
-        btnClear.setBounds(236, 186, 89, 23);
+        btnClear.setBounds(167, 186, 89, 23);
         panel_1.add(btnClear);
 
         JButton btnCalculate = new JButton("Calculate");
@@ -144,7 +144,7 @@ public class giaodien extends JFrame {
                 }
             }
         });
-        btnCalculate.setBounds(137, 186, 89, 23);
+        btnCalculate.setBounds(52, 186, 89, 23);
         panel_1.add(btnCalculate);
     }
 }
