@@ -24,13 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ins.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/"));
-                startActivity(intent);
-            }
-        });
+        
         git.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
