@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#ccc"
     tools:context=".MainActivity" >
 
     <TextView
@@ -26,29 +25,31 @@
         android:orientation="horizontal">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:background="@color/white"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
 
+            android:layout_height="match_parent">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputSearch"
+                android:background="@drawable/radius4"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="Search" />
+                android:hint="Search there..." />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageButton
+            android:scaleType="fitCenter"
             android:id="@+id/btnSearch"
+            android:background="#F5F5F5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@android:drawable/ic_menu_search" />
+            android:layout_height="50dp"
+            android:src="@drawable/search"/>
     </LinearLayout>
 
     <GridView
         android:id="@+id/gv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:numColumns="2" />
 
 </LinearLayout>

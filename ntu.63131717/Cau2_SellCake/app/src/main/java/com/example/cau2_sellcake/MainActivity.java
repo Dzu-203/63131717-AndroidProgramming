@@ -2,7 +2,10 @@ package com.example.cau2_sellcake;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
@@ -20,12 +23,20 @@ public class MainActivity extends AppCompatActivity {
     String[] listNameCake = {"Vanilla Cheese Cake","Croffle Chocolate Đen","Flan Cake","Bánh Mỳ Kẹp Xá Xíu","Salted Egg Pastry","New York Rolls Phô Mai","Crepe Chocolate","Apple Danish","Feuillete Au Chocolat","Snow chocolate","Layer latte cake","Bánh Cuộn Chocolate"};
     int[] listCoinCake = {295_000,23_000,25_000,28_000,35_000,15_000,35_000,23_000,20_000,320_000,280_000,15_000};
     ArrayList<Cake> listCake;
+    CustomAdapter customAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addInit();
+        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void addInit() {
@@ -36,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < listImgCake.length; i++){
             listCake.add(new Cake(listImgCake[i],listNameCake[i],listCoinCake[i]));
         }
-        CustomAdapter customAdapter = new CustomAdapter(this,R.layout.custom_item,listCake);
+        customAdapter = new CustomAdapter(this,R.layout.custom_item,listCake);
         gv.setAdapter(customAdapter);
     }
 }
