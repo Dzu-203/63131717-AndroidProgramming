@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
     TextView txtName2,txtCoin2;
     Button btnAdd2;
     ImageButton imgAdd2;
-    TextInputEditText input;
+    EditText inputQ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,15 +34,15 @@ public class MainActivity2 extends AppCompatActivity {
         imgCake2.setImageResource(img2);
         txtName2.setText(name2);
         txtCoin2.setText(String.valueOf(coin2 + "đ"));
-        input.setText(String.valueOf(1));
         imgAdd2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int inputQuantity = Integer.parseInt(input.getText().toString());
-                int CoinCurrent = Integer.parseInt(txtCoin2.getText().toString());
+                int inputQuantity = Integer.parseInt(inputQ.getText().toString());
                 inputQuantity+=1;
-                int rate = inputQuantity * CoinCurrent;
+                inputQ.setText(String.valueOf(inputQuantity));
+                int rate = inputQuantity * coin2;
                 txtCoin2.setText(String.valueOf(rate + "đ"));
+
             }
         });
         btnAdd2.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +69,7 @@ public class MainActivity2 extends AppCompatActivity {
         txtCoin2 = findViewById(R.id.coinCake2);
         imgAdd2 = findViewById(R.id.imgAdd);
         btnAdd2 = findViewById(R.id.btnAdd);
-        input = findViewById(R.id.quantityCake2);
+        inputQ = findViewById(R.id.quantityCake2);
 
     }
 }
