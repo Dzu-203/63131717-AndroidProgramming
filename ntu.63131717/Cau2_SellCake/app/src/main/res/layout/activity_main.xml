@@ -8,6 +8,12 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:background="@color/purple"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="34dp" />
+
+    <TextView
         android:id="@+id/txtName"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -51,5 +57,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="2" />
+
 
 </LinearLayout>
