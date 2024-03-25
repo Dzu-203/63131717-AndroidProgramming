@@ -1,16 +1,26 @@
 package com.example.cau2_sellcake;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity2 extends AppCompatActivity {
 
     ImageView imgCake2;
     TextView txtName2,txtCoin2;
+    Button btnAdd2;
+    ImageButton imgAdd2;
+    TextInputEditText input;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +33,42 @@ public class MainActivity2 extends AppCompatActivity {
         imgCake2.setImageResource(img2);
         txtName2.setText(name2);
         txtCoin2.setText(String.valueOf(coin2 + "đ"));
+        input.setText(String.valueOf(1));
+        imgAdd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int inputQuantity = Integer.parseInt(input.getText().toString());
+                int CoinCurrent = Integer.parseInt(txtCoin2.getText().toString());
+                inputQuantity+=1;
+                int rate = inputQuantity * CoinCurrent;
+                txtCoin2.setText(String.valueOf(rate + "đ"));
+            }
+        });
+        btnAdd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity2.this);
+                alertDialog.setTitle("Success");
+                alertDialog.setMessage("Mua hàng thành công");
+                alertDialog.setPositiveButton("Đóng", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                alertDialog.show();
+            }
+        });
+
     }
 
     private void addInit() {
         imgCake2 = findViewById(R.id.imgCake2);
         txtName2 = findViewById(R.id.nameCake2);
         txtCoin2 = findViewById(R.id.coinCake2);
+        imgAdd2 = findViewById(R.id.imgAdd);
+        btnAdd2 = findViewById(R.id.btnAdd);
+        input = findViewById(R.id.quantityCake2);
+
     }
 }
