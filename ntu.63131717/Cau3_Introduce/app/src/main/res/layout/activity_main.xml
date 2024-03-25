@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageView4"
+        android:id="@+id/btnfb"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="91dp"
@@ -70,13 +70,13 @@
         android:background="#fff"
         android:scaleType="centerCrop"
         android:src="@drawable/fb"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/btngit"
         app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/btnig"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageButton
-        android:id="@+id/imageView5"
+        android:id="@+id/btnig"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="60dp"
@@ -88,7 +88,7 @@
         app:srcCompat="@drawable/ig" />
 
     <ImageButton
-        android:id="@+id/imageView6"
+        android:id="@+id/btngit"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="80dp"
