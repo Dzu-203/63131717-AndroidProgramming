@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import ntu.mssv63131717.Activities.QuestionActivity;
 import ntu.mssv63131717.Models.Level;
 import ntu.mssv63131717.R;
+import ntu.mssv63131717.databinding.ItemLevelBinding;
 
 public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> {
     Context context;
@@ -36,7 +37,15 @@ public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         Level level = list.get(position);
-        holder.name.setText(level.getName());
+        holder.binding.setLevel.setText(level.getName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, QuestionActivity.class);
+                intent.putExtra("level",level.getName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -44,22 +53,15 @@ public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> 
         return list.size();
     }
 
-    public class viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView name;
+    public class viewHolder extends RecyclerView.ViewHolder{
+        ItemLevelBinding binding;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            this.name = itemView.findViewById(R.id.set_level);
-            itemView.setOnClickListener(this);
+            binding = ItemLevelBinding.bind(itemView);
 
         }
 
-        @Override
-        public void onClick(View v) {
-            int clicked = getAdapterPosition();
-            Level choose = list.get(clicked);
-            Intent intent = new Intent(context, QuestionActivity.class);
-            context.startActivity(intent);
-        }
+
     }
 }

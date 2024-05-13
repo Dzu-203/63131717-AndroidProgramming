@@ -11,22 +11,23 @@ import java.util.ArrayList;
 import ntu.mssv63131717.Adapters.LevelAdapter;
 import ntu.mssv63131717.Models.Level;
 import ntu.mssv63131717.R;
+import ntu.mssv63131717.databinding.ActivityLevelBinding;
 
 public class LevelActivity extends AppCompatActivity {
-    RecyclerView rc_level;
-    LevelAdapter levelAdapter;
+    ActivityLevelBinding binding;
     ArrayList<Level> listLevel;
+    LevelAdapter levelAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level);
+        binding = ActivityLevelBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         listLevel = getData();
-        rc_level = findViewById(R.id.recyclerLevel);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        rc_level.setLayoutManager(layoutManager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        binding.recyclerLevel.setLayoutManager(layoutManager);
         levelAdapter = new LevelAdapter(this,listLevel);
-        rc_level.setAdapter(levelAdapter);
+        binding.recyclerLevel.setAdapter(levelAdapter);
 
     }
     ArrayList<Level> getData(){
