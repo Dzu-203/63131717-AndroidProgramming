@@ -1,6 +1,7 @@
 package ntu.mssv63131717.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import ntu.mssv63131717.Activities.QuestionActivity;
 import ntu.mssv63131717.Models.Level;
 import ntu.mssv63131717.R;
 
@@ -56,8 +58,8 @@ public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> 
         public void onClick(View v) {
             int clicked = getAdapterPosition();
             Level choose = list.get(clicked);
-            String string = "Bạn vừa click vào " + choose.getName();
-            Toast.makeText(v.getContext(),string,Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(context, QuestionActivity.class);
+            context.startActivity(intent);
         }
     }
 }
