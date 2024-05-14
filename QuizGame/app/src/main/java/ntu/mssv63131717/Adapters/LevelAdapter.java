@@ -44,6 +44,7 @@ public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> 
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.putExtra("level",level.getName());
                 context.startActivity(intent);
+
             }
         });
     }
