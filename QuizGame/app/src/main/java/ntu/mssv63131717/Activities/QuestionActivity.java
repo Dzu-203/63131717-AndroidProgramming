@@ -1,7 +1,5 @@
 package ntu.mssv63131717.Activities;
 
-import static java.lang.String.*;
-
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +8,10 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import java.util.ArrayList;
 
@@ -33,23 +31,26 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityQuestionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        questions = new ArrayList<>();
         String level = getIntent().getStringExtra("level");
         switch (level){
-            case "level 1":
+            case "Level 1":
                 renderQuestion1();
                 break;
-            case "level 2":
+            case "Level 2":
                 renderQuestion2();
                 break;
-            case "level 3":
+            case "Level 3":
                 renderQuestion3();
                 break;
-            case "level 4":
+            case "Level 4":
                 renderQuestion4();
                 break;
-            case "level 5":
+            case "Level 5":
                 renderQuestion5();
                 break;
+            default:
+                Toast.makeText(this,"Lỗi không mong muốn vui lòng thử lại !!",Toast.LENGTH_SHORT).show();
         }
         for (int i = 0; i < 4; i++){
             binding.btnOption.getChildAt(i).setOnClickListener(new View.OnClickListener() {
@@ -59,6 +60,7 @@ public class QuestionActivity extends AppCompatActivity {
                 }
             });
         }
+        animationQuestion(binding.questionData,0,questions.get(position).getQuestion());
         binding.btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,8 +82,9 @@ public class QuestionActivity extends AppCompatActivity {
         });
     }
 
-    private void animationQuestion(TextView view, int value, String data) {
-        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500).setStartDelay(100).setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
+    private void animationQuestion(View view, int value, String data) {
+        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500).setStartDelay(100).
+                setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(@NonNull Animator animation) {
                 if (value == 0 && count < 4){
@@ -105,7 +108,7 @@ public class QuestionActivity extends AppCompatActivity {
                 if (value == 0){
                     try {
                         ((TextView)view).setText(data);
-                        binding.currentQuestion.setText(String.format("%d%d",position+1,questions.size()));
+                        binding.totalQuestion.setText(position+1+"/"+questions.size());
                     }
                     catch (Exception e){
                         ((Button)view).setText(data);
@@ -142,11 +145,11 @@ public class QuestionActivity extends AppCompatActivity {
         binding.btnNext.setAlpha(1);
         if (selected.getText().toString().equals(questions.get(position).getOptionCorrect())){
             score+=1;
-            selected.setBackgroundResource(R.drawable.custom_correct);
+            selected.setBackgroundResource(R.drawable.custombtn_correct);
         }else {
-            selected.setBackgroundResource(R.drawable.custom_incorrect);
-            Button correctAnswer = binding.btnOption.findViewWithTag(questions.get(position).getOptionCorrect());
-            correctAnswer.setBackgroundResource(R.drawable.custom_correct);
+            selected.setBackgroundResource(R.drawable.custombtn_incorrect);
+            Button correctAnswer = (Button) binding.btnOption.findViewWithTag(questions.get(position).getOptionCorrect());
+            correctAnswer.setBackgroundResource(R.drawable.custombtn_correct);
         }
     }
 
