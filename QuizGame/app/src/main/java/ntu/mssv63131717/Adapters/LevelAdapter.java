@@ -21,10 +21,13 @@ import ntu.mssv63131717.databinding.ItemLevelBinding;
 public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> {
     Context context;
     ArrayList<Level> list;
+    String course;
 
-    public LevelAdapter(Context context, ArrayList<Level> list) {
+
+    public LevelAdapter(Context context, ArrayList<Level> list,String course) {
         this.context = context;
         this.list = list;
+        this.course = course;
     }
 
     @NonNull
@@ -43,6 +46,7 @@ public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> 
             public void onClick(View v) {
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.putExtra("level",level.getName());
+                intent.putExtra("course",course);
                 context.startActivity(intent);
 
             }
@@ -60,6 +64,7 @@ public class LevelAdapter extends RecyclerView.Adapter<LevelAdapter.viewHolder> 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             binding = ItemLevelBinding.bind(itemView);
+
 
         }
 

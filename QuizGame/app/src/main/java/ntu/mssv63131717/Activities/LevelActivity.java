@@ -27,10 +27,13 @@ public class LevelActivity extends AppCompatActivity {
         binding = ActivityLevelBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         listLevel = getData();
+        String course = getIntent().getStringExtra("course");
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.recyclerLevel.setLayoutManager(layoutManager);
-        levelAdapter = new LevelAdapter(this,listLevel);
+        levelAdapter = new LevelAdapter(this,listLevel,course);
         binding.recyclerLevel.setAdapter(levelAdapter);
+        binding.totalLevel.setText(String.valueOf(listLevel.size()));
+        binding.totalQues.setText(String.valueOf(listLevel.size()*5));
         binding.backLevel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
