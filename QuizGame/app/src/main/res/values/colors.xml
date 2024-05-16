@@ -4,12 +4,12 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_5800">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_280">#FF03DAC5</color>
+    <color name="teal_280">#009787</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="backg">#6a5be2</color>
     <color name="category">#e8e4fa</color>
-    <color name="click">#ff8fa3</color>
+    <color name="click">#F694A5</color>
     <color name="ques">#3F51B5</color>
 </resources>
