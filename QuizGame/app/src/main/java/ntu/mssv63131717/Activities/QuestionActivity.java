@@ -3,6 +3,7 @@ package ntu.mssv63131717.Activities;
 import android.animation.Animator;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.util.ArrayList;
 
@@ -127,17 +130,23 @@ public class QuestionActivity extends AppCompatActivity {
         if (selected.getText().toString().equals(questions.get(position).getOptionCorrect())){
             score+=1;
             selected.setBackgroundResource(R.drawable.custombtn_correct);
+            selected.setTextColor(Color.WHITE);
         }else {
             selected.setBackgroundResource(R.drawable.custombtn_incorrect);
+            selected.setTextColor(Color.WHITE);
             Button correctAnswer = (Button) binding.btnOption.findViewWithTag(questions.get(position).getOptionCorrect());
             correctAnswer.setBackgroundResource(R.drawable.custombtn_correct);
+            correctAnswer.setTextColor(Color.WHITE);
         }
     }
     private void enableOption(boolean enable) {
+
         for (int i = 0; i < 4; i++){
-            binding.btnOption.getChildAt(i).setEnabled(enable);
-            if (enable){
-                binding.btnOption.getChildAt(i).setBackgroundResource(R.drawable.custom_button);
+            View view = binding.btnOption.getChildAt(i);
+            view.setEnabled(enable);
+            view.setBackgroundResource(R.drawable.custom_button);
+            if (view instanceof Button) {
+                ((Button) view).setTextColor(ResourcesCompat.getColor(getResources(), R.color.text3, null)); // Hoặc bất kỳ màu chữ nào bạn muốn
             }
         }
     }

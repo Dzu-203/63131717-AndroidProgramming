@@ -1,51 +1,60 @@
 package ntu.mssv63131717;
 
 import android.content.Intent;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
 import ntu.mssv63131717.Activities.LevelActivity;
 import ntu.mssv63131717.Adapters.CourseAdapter;
+import ntu.mssv63131717.Fragments.ContactFragment;
+import ntu.mssv63131717.Fragments.CourseFragment;
 import ntu.mssv63131717.Models.Course;
 import ntu.mssv63131717.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
-    ArrayList<Course> courses = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        courses = GetData();
-        CourseAdapter adapter = new CourseAdapter(this,R.layout.item_course,courses);
-        binding.gridCourse.setAdapter(adapter);
-        binding.gridCourse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navbottom);
+        binding.navbottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this,LevelActivity.class);
-                intent.putExtra("course",courses.get(position).getNameCourse());
-                startActivity(intent);
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int itemID = menuItem.getItemId();
+                if(itemID == R.id.homeCourse){
+                    replaceFragment(new CourseFragment());
+                }else if (itemID == R.id.contactCourse){
+                    replaceFragment(new ContactFragment());
+                }
+                return true;
             }
         });
-
+        replaceFragment(new CourseFragment());
     }
 
-    public ArrayList<Course> GetData(){
-        ArrayList<Course> lists = new ArrayList<>();
-        lists.add(new Course(R.drawable.html,"HTML"));
-        lists.add(new Course(R.drawable.js,"JavaScript"));
-        lists.add(new Course(R.drawable.python,"Python"));
-        lists.add(new Course(R.drawable.android,"Android"));
-        return lists;
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment,fragment);
+        fragmentTransaction.commit();
     }
 
 }
