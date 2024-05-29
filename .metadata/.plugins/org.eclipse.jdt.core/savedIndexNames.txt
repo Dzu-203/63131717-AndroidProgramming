@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+D:\Workspace\MSSV-AndroidProgramming\.metadata\.plugins\org.eclipse.jdt.core
+3924849240.index
+1762164807.index
+395132631.index
+1455497133.index
+2907864197.index
+3566230504.index
+1865797976.index
