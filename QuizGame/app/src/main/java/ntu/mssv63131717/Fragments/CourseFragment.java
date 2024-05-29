@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,13 +13,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 import ntu.mssv63131717.Activities.LevelActivity;
 import ntu.mssv63131717.Adapters.CourseAdapter;
 import ntu.mssv63131717.Models.Course;
+import ntu.mssv63131717.Models.DataLoadedCallbackCourse;
 import ntu.mssv63131717.R;
-import ntu.mssv63131717.databinding.FragmentCourseBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,27 +81,46 @@ public class CourseFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_course,container,false);
         GridView gridCourse = view.findViewById(R.id.gridCourse);
-        courses = GetData();
-        CourseAdapter adapter = new CourseAdapter((Activity) requireContext(),R.layout.item_course,courses);
-        gridCourse.setAdapter(adapter);
-        gridCourse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        GetData(new DataLoadedCallbackCourse() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(requireContext(), LevelActivity.class);
-                intent.putExtra("course",courses.get(position).getNameCourse());
-                startActivity(intent);
+            public void onDataLoaded(ArrayList<Course> courses) {
+                CourseAdapter adapter = new CourseAdapter((Activity) requireContext(),R.layout.item_course,courses);
+                gridCourse.setAdapter(adapter);
+                gridCourse.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent intent = new Intent(requireContext(), LevelActivity.class);
+                        intent.putExtra("course",courses.get(position).getNameCourse());
+                        startActivity(intent);
+                    }
+                });
             }
         });
         return view;
-
     }
-    public ArrayList<Course> GetData(){
-        ArrayList<Course> lists = new ArrayList<>();
-        lists.add(new Course(R.drawable.html,"HTML"));
-        lists.add(new Course(R.drawable.js,"JavaScript"));
-        lists.add(new Course(R.drawable.python,"Python"));
-        lists.add(new Course(R.drawable.android,"Android"));
-        return lists;
+    public void GetData(final DataLoadedCallbackCourse callback){
+        ArrayList<Course> list = new ArrayList<>();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("courses");
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    String courseName = dataSnapshot.child("name").getValue(String.class);
+                    String drawableName = courseName.toLowerCase();
+                    int drawableId = getResources().getIdentifier(drawableName, "drawable", getActivity().getPackageName());
+                    if (drawableId == 0) {
+                        drawableId = R.drawable.android;
+                    }
+                    list.add(new Course(drawableId, courseName));
+
+                }
+                callback.onDataLoaded(list);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
     }
 
 }

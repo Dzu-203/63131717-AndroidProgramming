@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.google.firebase.database.DataSnapshot;
@@ -31,13 +29,14 @@ import ntu.mssv63131717.R;
 import ntu.mssv63131717.databinding.ActivityQuestionBinding;
 
 public class QuestionActivity extends AppCompatActivity {
-    ActivityQuestionBinding binding;
-    ArrayList<Question> questions;
-    int count = 0;
-    int position = 0;
-    int score = 0;
-    CountDownTimer countDownTimer;
-    String course,level;
+
+    private ActivityQuestionBinding binding;
+    private ArrayList<Question> questions;
+    private int count = 0;
+    private int position = 0;
+    private int score = 0;
+    private CountDownTimer countDownTimer;
+    private String course, level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +44,11 @@ public class QuestionActivity extends AppCompatActivity {
         binding = ActivityQuestionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         questions = new ArrayList<>();
-//        ResetTime();
-//        countDownTimer.start();
+
         course = getIntent().getStringExtra("course");
         level = getIntent().getStringExtra("level");
-        fetchQuestions(level);
+        fetchQuestions();
+
         binding.btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,82 +58,67 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     private void handleNext() {
-        if (countDownTimer != null){
+        if (countDownTimer != null) {
             countDownTimer.cancel();
         }
         countDownTimer.start();
         binding.btnNext.setEnabled(false);
-        binding.btnNext.setAlpha((float) 0.3);
+        binding.btnNext.setAlpha(0.3f);
         enableOption(true);
-        position+=1;
-        if (position == questions.size()){
-            Intent intent = new Intent(QuestionActivity.this,CongratulationActivity.class);
-            intent.putExtra("score",score);
-            intent.putExtra("total",questions.size());
+        position++;
+        if (position == questions.size()) {
+            Intent intent = new Intent(QuestionActivity.this, CongratulationActivity.class);
+            intent.putExtra("score", score);
+            intent.putExtra("total", questions.size());
             startActivity(intent);
             finish();
             return;
         }
 
         count = 0;
-        animationQuestion(binding.questionData,0,questions.get(position).getQuestion());
+        animateQuestion(binding.questionData, 0, questions.get(position).getQuestion());
     }
 
-    private void fetchQuestions(String level) {
+    private void fetchQuestions() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("courses");
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                seTupCourse(snapshot);
-                setupQuestionUI(level);
+                setupCourse(snapshot);
+                setupQuestionUI();
+                resetTime();
+                countDownTimer.start();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Handle possible errors.
+                Toast.makeText(QuestionActivity.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void seTupCourse(DataSnapshot snapshot) {
-        switch (course) {
-            case "HTML":
-                seTupLevel(snapshot.child("0").child("levels"));
+    private void setupCourse(DataSnapshot snapshot) {
+        for (DataSnapshot courseSnapshot : snapshot.getChildren()) {
+            String courseName = courseSnapshot.child("name").getValue(String.class);
+            if (courseName != null && courseName.equals(course)) {
+                setupLevel(courseSnapshot.child("levels"));
                 break;
-            case "JavaScript":
-                seTupLevel(snapshot.child("1").child("levels"));
-                break;
-            case "Python":
-                seTupLevel(snapshot.child("2").child("levels"));
-                break;
-            case "Android":
-                seTupLevel(snapshot.child("3").child("levels"));
-                break;
-            default:
-                Toast.makeText(this, "Course not found", Toast.LENGTH_SHORT).show();
-                break;
+            }
         }
     }
-    private void seTupLevel(DataSnapshot snapshot) {
-        switch (level) {
-            case "Level 1":
-                getDataQuestion(snapshot.child("0").child("questions"));
-                break;
-            case "Level 2":
-                getDataQuestion(snapshot.child("1").child("questions"));
-                break;
-            case "Level 3":
-                getDataQuestion(snapshot.child("2").child("questions"));
-                break;
-            case "Level 4":
-                getDataQuestion(snapshot.child("3").child("questions"));
-                break;
-            default:
-                Toast.makeText(this, "Lỗi không mong muốn vui lòng thử lại sau", Toast.LENGTH_SHORT).show();
-                break;
+
+    private void setupLevel(DataSnapshot snapshot) {
+        try {
+            int levelIndex = Integer.parseInt(level.replace("Level ", "")) - 1;
+            getDataQuestions(snapshot.child(String.valueOf(levelIndex)).child("questions"));
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Cấp độ không hợp lệ", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(this, "Lỗi không mong muốn vui lòng thử lại sau", Toast.LENGTH_SHORT).show();
         }
     }
-    private void getDataQuestion(DataSnapshot snapshot) {
+
+    private void getDataQuestions(DataSnapshot snapshot) {
         for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
             String question = dataSnapshot.child("question").getValue(String.class);
             String op1 = dataSnapshot.child("options").child("0").getValue(String.class);
@@ -145,7 +129,8 @@ public class QuestionActivity extends AppCompatActivity {
             questions.add(new Question(question, op1, op2, op3, op4, answer));
         }
     }
-    private void setupQuestionUI(String level) {
+
+    private void setupQuestionUI() {
         for (int i = 0; i < 4; i++) {
             binding.btnOption.getChildAt(i).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -155,129 +140,121 @@ public class QuestionActivity extends AppCompatActivity {
             });
         }
 
-        if (questions.size() > 0) {
-            animationQuestion(binding.questionData, 0, questions.get(position).getQuestion());
+        if (!questions.isEmpty()) {
+            animateQuestion(binding.questionData, 0, questions.get(position).getQuestion());
         } else {
             Toast.makeText(this, "Không có dữ liệu vui lòng thử lại sau", Toast.LENGTH_SHORT).show();
         }
     }
 
-
-    private void ResetTime() {
-        countDownTimer = new CountDownTimer(30000,1000) {
+    private void resetTime() {
+        countDownTimer = new CountDownTimer(30000, 1000) {
             @Override
             public void onTick(long l) {
-                binding.timer.setText(String.valueOf(l/1000));
+                binding.timer.setText(String.valueOf(l / 1000));
             }
 
             @Override
             public void onFinish() {
-                Dialog dialog = new Dialog(QuestionActivity.this);
-                dialog.setCancelable(false);
-                dialog.setContentView(R.layout.timeout);
-                dialog.findViewById(R.id.again).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(QuestionActivity.this,LevelActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-                dialog.show();
+                showTimeoutDialog();
             }
         };
     }
 
+    private void showTimeoutDialog() {
+        Dialog dialog = new Dialog(QuestionActivity.this);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.timeout);
+        dialog.findViewById(R.id.again).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuestionActivity.this, LevelActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        dialog.show();
+    }
+
     private void checkAnswer(Button selected) {
-        if (countDownTimer != null){
+        if (countDownTimer != null) {
             countDownTimer.cancel();
         }
         binding.btnNext.setEnabled(true);
         binding.btnNext.setAlpha(1);
-        if (selected.getText().toString().equals(questions.get(position).getOptionCorrect())){
-            score+=1;
+        enableOption(false);
+
+        if (selected.getText().toString().equals(questions.get(position).getOptionCorrect())) {
+            score++;
             selected.setBackgroundResource(R.drawable.custombtn_correct);
             selected.setTextColor(Color.WHITE);
-        }else {
+        } else {
             selected.setBackgroundResource(R.drawable.custombtn_incorrect);
             selected.setTextColor(Color.WHITE);
-            Button correctAnswer = (Button) binding.btnOption.findViewWithTag(questions.get(position).getOptionCorrect());
+            Button correctAnswer = binding.btnOption.findViewWithTag(questions.get(position).getOptionCorrect());
             correctAnswer.setBackgroundResource(R.drawable.custombtn_correct);
             correctAnswer.setTextColor(Color.WHITE);
         }
     }
-    private void enableOption(boolean enable) {
 
-        for (int i = 0; i < 4; i++){
+    private void enableOption(boolean enable) {
+        for (int i = 0; i < 4; i++) {
             View view = binding.btnOption.getChildAt(i);
             view.setEnabled(enable);
             view.setBackgroundResource(R.drawable.custom_button);
             if (view instanceof Button) {
-                ((Button) view).setTextColor(ResourcesCompat.getColor(getResources(), R.color.text3, null)); // Hoặc bất kỳ màu chữ nào bạn muốn
+                ((Button) view).setTextColor(ResourcesCompat.getColor(getResources(), R.color.text3, null));
             }
         }
     }
-    private void animationQuestion(View view, int value, String data) {
-        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500).setStartDelay(100).
-                setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
+
+    private void animateQuestion(View view, int value, String data) {
+        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500).setStartDelay(100)
+                .setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(@NonNull Animator animation) {
-                        if (value == 0 && count < 4){
+                        if (value == 0 && count < 4) {
                             String option = "";
-                            if (count == 0){
-                                option = questions.get(position).getOptionA();
-                            }else if (count == 1){
-                                option = questions.get(position).getOptionB();
-                            }else if (count == 2){
-                                option = questions.get(position).getOptionC();
-                            }else if (count == 3){
-                                option = questions.get(position).getOptionD();
+                            switch (count) {
+                                case 0:
+                                    option = questions.get(position).getOptionA();
+                                    break;
+                                case 1:
+                                    option = questions.get(position).getOptionB();
+                                    break;
+                                case 2:
+                                    option = questions.get(position).getOptionC();
+                                    break;
+                                case 3:
+                                    option = questions.get(position).getOptionD();
+                                    break;
                             }
-                            animationQuestion(binding.btnOption.getChildAt(count),0,option);
+                            animateQuestion(binding.btnOption.getChildAt(count), 0, option);
                             count++;
                         }
                     }
+
                     @Override
                     public void onAnimationEnd(@NonNull Animator animation) {
-                        if (value == 0){
+                        if (value == 0) {
                             try {
-                                ((TextView)view).setText(data);
-                                binding.totalQuestion.setText(position+1+"/"+questions.size());
-                            }
-                            catch (Exception e){
-                                ((Button)view).setText(data);
+                                ((TextView) view).setText(data);
+                                binding.totalQuestion.setText(String.format("%d/%d", position + 1, questions.size()));
+                            } catch (Exception e) {
+                                ((Button) view).setText(data);
                             }
                             view.setTag(data);
-                            animationQuestion(view,1,data);
+                            animateQuestion(view, 1, data);
                         }
                     }
 
                     @Override
                     public void onAnimationCancel(@NonNull Animator animation) {
-
                     }
 
                     @Override
                     public void onAnimationRepeat(@NonNull Animator animation) {
-
                     }
                 });
     }
-    private void renderQuestion1(DataSnapshot snapshot) {
-
-    }
-    private void renderQuestion2(DataSnapshot snapshot) {
-
-    }
-    private void renderQuestion3(DataSnapshot snapshot) {
-
-    }
-    private void renderQuestion4(DataSnapshot snapshot) {
-
-    }
-    private void renderQuestion5(DataSnapshot snapshot) {
-
-    }
-
-
 }
