@@ -90,79 +90,86 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btnOption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question">
+        app:layout_constraintTop_toBottomOf="@+id/question"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtons">
 
-        <Button
-            android:id="@+id/btnA"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_button"
-            android:lineSpacingExtra="5dp"
-            android:padding="20dp"
-            android:textColor="#333333"
-            android:textSize="16sp"
-            app:backgroundTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnB"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/custom_button"
-            android:lineSpacingExtra="5dp"
-            android:padding="20dp"
-            android:textColor="#333333"
-            android:textSize="16sp"
-            app:backgroundTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnA" />
+            <Button
+                android:id="@+id/btnA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:lineSpacingExtra="5dp"
+                android:padding="20dp"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnC"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/custom_button"
-            android:lineSpacingExtra="5dp"
-            android:padding="20dp"
-            android:textColor="#333333"
-            android:textSize="16sp"
-            app:backgroundTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnB" />
+            <Button
+                android:id="@+id/btnB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:lineSpacingExtra="5dp"
+                android:padding="20dp"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnA" />
 
-        <Button
-            android:id="@+id/btnD"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/custom_button"
-            android:lineSpacingExtra="5dp"
-            android:padding="16dp"
-            android:textColor="#333333"
-            android:textSize="17sp"
-            app:backgroundTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnC" />
+            <Button
+                android:id="@+id/btnC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:lineSpacingExtra="5dp"
+                android:padding="20dp"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnB" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/btnD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:lineSpacingExtra="5dp"
+                android:padding="16dp"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnC" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomButtons"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
