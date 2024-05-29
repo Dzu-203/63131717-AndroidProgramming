@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Cau2_SellCake/app/src/androidTest/java"/>
+	<classpathentry kind="src" path="Cau2_SellCake/app/src/main/java"/>
+	<classpathentry kind="src" path="Cau2_SellCake/app/src/test/java"/>
+	<classpathentry kind="lib" path="Cau2_SellCake/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="Cau2_SellCake/app/build/intermediates/merged_java_res/debug/base.jar"/>
+	<classpathentry kind="lib" path="Cau2_SellCake/app/build/intermediates/project_dex_archive/debug/out/09ff9710dd1f8d08060448c0226bcbbe3afbf2ab84fb58bf362efdc9d4648ea4_0.jar"/>
+	<classpathentry kind="lib" path="Cau2_SellCake/app/build/intermediates/project_dex_archive/debug/out/09ff9710dd1f8d08060448c0226bcbbe3afbf2ab84fb58bf362efdc9d4648ea4_1.jar"/>
+	<classpathentry kind="lib" path="Cau2_SellCake/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="Cau2_SellCake/app/build/intermediates/javac/debug/classes"/>
+</classpath>

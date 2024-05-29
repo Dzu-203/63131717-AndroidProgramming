@@ -1,0 +1,1084 @@
+{
+  "courses": [
+    {
+      "name": "HTML",
+      "levels": [
+        {
+          "questions": [
+            {
+              "question": "What is HTML?",
+              "options": [
+                "HyperText Markup Language",
+                "HyperLink Transfer Markup Language",
+                "HyperText Making Language",
+                "Hyper Tool Markup Language"
+              ],
+              "answer": "HyperText Markup Language"
+            },
+            {
+              "question": "What is CSS?",
+              "options": [
+                "Cascading Style Sheets",
+                "Colorful Style Sheets",
+                "Computer Style Sheets",
+                "Creative Style Sheets"
+              ],
+              "answer": "Cascading Style Sheets"
+            },
+            {
+              "question": "What is JavaScript?",
+              "options": [
+                "A programming language used to create interactive web pages",
+                "A markup language used to create web pages",
+                "A scripting language used to create web pages",
+                "A database language used to create web pages"
+              ],
+              "answer": "A programming language used to create interactive web pages"
+            },
+            {
+              "question": "What is a tag in HTML?",
+              "options": [
+                "A tag is a special keyword in HTML that is used to mark up the start and end of an element",
+                "A tag is a special keyword in HTML that is used to mark up the start of an element",
+                "A tag is a special keyword in HTML that is used to mark up the end of an element",
+                "A tag is a special keyword in HTML that is used to mark up the content of an element"
+              ],
+              "answer": "A tag is a special keyword in HTML that is used to mark up the start and end of an element"
+            },
+            {
+              "question": "What is an attribute in HTML?",
+              "options": [
+                "An attribute is a property of an HTML element that provides additional information about the element",
+                "An attribute is a property of an HTML element that provides the content of the element",
+                "An attribute is a property of an HTML element that provides the style of the element",
+                "An attribute is a property of an HTML element that provides the behavior of the element"
+              ],
+              "answer": "An attribute is a property of an HTML element that provides additional information about the element"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the purpose of the `<head>` tag in HTML?",
+              "options": [
+                "To define the document title and metadata",
+                "To define the document body content",
+                "To define the document header and footer",
+                "To define the document navigation menu"
+              ],
+              "answer": "To define the document title and metadata"
+            },
+            {
+              "question": "What is the difference between `<strong>` and `<b>` tags in HTML?",
+              "options": [
+                "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style",
+                "The `<strong>` tag indicates bold font style, while the `<b>` tag indicates strong importance",
+                "The `<strong>` tag is used for headings, while the `<b>` tag is used for paragraphs",
+                "The `<strong>` tag is used for links, while the `<b>` tag is used for images"
+              ],
+              "answer": "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "To provide alternative text for images",
+                "To provide a tooltip for images",
+                "To provide a caption for images",
+                "To provide a link to a larger image"
+              ],
+              "answer": "To provide alternative text for images"
+            },
+            {
+              "question": "What is the difference between HTML and XHTML?",
+              "options": [
+                "HTML is a markup language, while XHTML is a hybrid of HTML and XML",
+                "HTML is a scripting language, while XHTML is a markup language",
+                "HTML is a styling language, while XHTML is a markup language",
+                "HTML is a markup language, while XHTML is a styling language"
+              ],
+              "answer": "HTML is a markup language, while XHTML is a hybrid of HTML and XML"
+            },
+            {
+              "question": "What is an attribute in HTML?",
+              "options": [
+                "An attribute is a property of an HTML element that provides additional information about the element",
+                "An attribute is a property of an HTML element that provides the content of the element",
+                "An attribute is a property of an HTML element that provides the style of the element",
+                "An attribute is a property of an HTML element that provides the behavior of the element"
+              ],
+              "answer": "An attribute is a property of an HTML element that provides additional information about the element"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the purpose of the `<head>` tag in HTML?",
+              "options": [
+                "To define the document title and metadata",
+                "To define the document body content",
+                "To define the document header and footer",
+                "To define the document navigation menu"
+              ],
+              "answer": "To define the document title and metadata"
+            },
+            {
+              "question": "What is the difference between `<strong>` and `<b>` tags in HTML?",
+              "options": [
+                "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style",
+                "The `<strong>` tag indicates bold font style, while the `<b>` tag indicates strong importance",
+                "The `<strong>` tag is used for headings, while the `<b>` tag is used for paragraphs",
+                "The `<strong>` tag is used for links, while the `<b>` tag is used for images"
+              ],
+              "answer": "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "To provide alternative text for images",
+                "To provide a tooltip for images",
+                "To provide a caption for images",
+                "To provide a link to a larger image"
+              ],
+              "answer": "To provide alternative text for images"
+            },
+            {
+              "question": "What is the difference between HTML and XHTML?",
+              "options": [
+                "HTML is a markup language, while XHTML is a hybrid of HTML and XML",
+                "HTML is a scripting language, while XHTML is a markup language",
+                "HTML is a styling language, while XHTML is a markup language",
+                "HTML is a markup language, while XHTML is a styling language"
+              ],
+              "answer": "HTML is a markup language, while XHTML is a hybrid of HTML and XML"
+            },
+            {
+              "question": "What is an attribute in HTML?",
+              "options": [
+                "An attribute is a property of an HTML element that provides additional information about the element",
+                "An attribute is a property of an HTML element that provides the content of the element",
+                "An attribute is a property of an HTML element that provides the style of the element",
+                "An attribute is a property of an HTML element that provides the behavior of the element"
+              ],
+              "answer": "An attribute is a property of an HTML element that provides additional information about the element"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the purpose of the `<head>` tag in HTML?",
+              "options": [
+                "To define the document title and metadata",
+                "To define the document body content",
+                "To define the document header and footer",
+                "To define the document navigation menu"
+              ],
+              "answer": "To define the document title and metadata"
+            },
+            {
+              "question": "What is the difference between `<strong>` and `<b>` tags in HTML?",
+              "options": [
+                "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style",
+                "The `<strong>` tag indicates bold font style, while the `<b>` tag indicates strong importance",
+                "The `<strong>` tag is used for headings, while the `<b>` tag is used for paragraphs",
+                "The `<strong>` tag is used for links, while the `<b>` tag is used for images"
+              ],
+              "answer": "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "To provide alternative text for images",
+                "To provide a tooltip for images",
+                "To provide a caption for images",
+                "To provide a link to a larger image"
+              ],
+              "answer": "To provide alternative text for images"
+            },
+            {
+              "question": "What is the difference between HTML and XHTML?",
+              "options": [
+                "HTML is a markup language, while XHTML is a hybrid of HTML and XML",
+                "HTML is a scripting language, while XHTML is a markup language",
+                "HTML is a styling language, while XHTML is a markup language",
+                "HTML is a markup language, while XHTML is a styling language"
+              ],
+              "answer": "HTML is a markup language, while XHTML is a hybrid of HTML and XML"
+            },
+            {
+              "question": "What is an attribute in HTML?",
+              "options": [
+                "An attribute is a property of an HTML element that provides additional information about the element",
+                "An attribute is a property of an HTML element that provides the content of the element",
+                "An attribute is a property of an HTML element that provides the style of the element",
+                "An attribute is a property of an HTML element that provides the behavior of the element"
+              ],
+              "answer": "An attribute is a property of an HTML element that provides additional information about the element"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the purpose of the `<head>` tag in HTML?",
+              "options": [
+                "To define the document title and metadata",
+                "To define the document body content",
+                "To define the document header and footer",
+                "To define the document navigation menu"
+              ],
+              "answer": "To define the document title and metadata"
+            },
+            {
+              "question": "What is the difference between `<strong>` and `<b>` tags in HTML?",
+              "options": [
+                "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style",
+                "The `<strong>` tag indicates bold font style, while the `<b>` tag indicates strong importance",
+                "The `<strong>` tag is used for headings, while the `<b>` tag is used for paragraphs",
+                "The `<strong>` tag is used for links, while the `<b>` tag is used for images"
+              ],
+              "answer": "The `<strong>` tag indicates strong importance, while the `<b>` tag indicates bold font style"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "To provide alternative text for images",
+                "To provide a tooltip for images",
+                "To provide a caption for images",
+                "To provide a link to a larger image"
+              ],
+              "answer": "To provide alternative text for images"
+            },
+            {
+              "question": "What is the difference between HTML and XHTML?",
+              "options": [
+                "HTML is a markup language, while XHTML is a hybrid of HTML and XML",
+                "HTML is a scripting language, while XHTML is a markup language",
+                "HTML is a styling language, while XHTML is a markup language",
+                "HTML is a markup language, while XHTML is a styling language"
+              ],
+              "answer": "HTML is a markup language, while XHTML is a hybrid of HTML and XML"
+            },
+            {
+              "question": "What is an attribute in HTML?",
+              "options": [
+                "An attribute is a property of an HTML element that provides additional information about the element",
+                "An attribute is a property of an HTML element that provides the content of the element",
+                "An attribute is a property of an HTML element that provides the style of the element",
+                "An attribute is a property of an HTML element that provides the behavior of the element"
+              ],
+              "answer": "An attribute is a property of an HTML element that provides additional information about the element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "levels": [
+        {
+          "id": 1,
+          "questions": [
+            {
+              "question": "What is the difference between `==` and `===` operators in JavaScript?",
+              "options": [
+                "The `==` operator checks for value equality, while the `===` operator checks for value and type equality",
+                "The `==` operator checks for value and type equality, while the `===` operator checks for value equality",
+                "The `==` operator checks for value and type equality, while the `===` operator checks for value equality",
+                "The `==` operator checks for value equality, while the `===` operator checks for value and type equality"
+              ],
+              "answer": "The `==` operator checks for value equality, while the `===` operator checks for value and type equality"
+            },
+            {
+              "question": "What is the purpose of the `typeof` operator in JavaScript?",
+              "options": [
+                "To check the data type of a variable",
+                "To define the data type of a variable",
+                "To check the value of a variable",
+                "To define the value of a variable"
+              ],
+              "answer": "To check the data type of a variable"
+            },
+            {
+              "question": "What is the purpose of the `instanceof` operator in JavaScript?",
+              "options": [
+                "To check if an object is an instance of a particular class",
+                "To check if a variable is a reference to another variable",
+                "To check if a variable is an instance of a particular function",
+                "To check if a variable is a primitive value"
+              ],
+              "answer": "To check if an object is an instance of a particular class"
+            },
+            {
+              "question": "What is the purpose of the `var` keyword in JavaScript?",
+              "options": [
+                "To declare a global variable",
+                "To declare a local variable",
+                "To declare a constant variable",
+                "To declare a static variable"
+              ],
+              "answer": "To declare a local variable"
+            },
+            {
+              "question": "What is an object in JavaScript?",
+              "options": [
+                "An object is a collection of key-value pairs",
+                "An object is a loop in JavaScript",
+                "An object is a data type in JavaScript",
+                "An object is a reserved word in JavaScript"
+              ],
+              "answer": "An object is a collection of key-value pairs"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between a function and a method in JavaScript?",
+              "options": [
+                "A function is a reusable block of code, while a method is a function within an object",
+                "A function is a function within an object, while a method is a reusable block of code",
+                "A function is a method within an object, while a method is a function outside an object",
+                "A function is a reusable block of code, while a method is a method within an object"
+              ],
+              "answer": "A function is a reusable block of code, while a method is a function within an object"
+            },
+            {
+              "question": "What is the purpose of the `this` keyword in JavaScript?",
+              "options": [
+                "To reference the current function",
+                "To reference the current object",
+                "To reference the global object",
+                "To reference the current variable"
+              ],
+              "answer": "To reference the current object"
+            },
+            {
+              "question": "What is the purpose of the `arguments` object in JavaScript?",
+              "options": [
+                "To store the function's arguments",
+                "To store the object's properties",
+                "To store the current variable's value",
+                "To store the function's properties"
+              ],
+              "answer": "To store the function's arguments"
+            },
+            {
+              "question": "What is the purpose of the `apply` method in JavaScript?",
+              "options": [
+                "To call a function with a specified `this` value and arguments provided as an array",
+                "To call a function with a specified `this` value and arguments provided as an object",
+                "To call a function with a specified `this` value and arguments provided as a function",
+                "To call a function with a specified `this` value and no arguments"
+              ],
+              "answer": "To call a function with a specified `this` value and arguments provided as an array"
+            },
+            {
+              "question": "What is the difference between a `function` and a `method` in JavaScript?",
+              "options": [
+                "A function is a standalone block of code, while a method is a function that is part of an object",
+                "A function is a part of an object, while a method is a standalone block of code",
+                "A function is used for calculations, while a method is used for data manipulation",
+                "A function is used for event handling, while a method is used for animation"
+              ],
+              "answer": "A function is a standalone block of code, while a method is a function that is part of an object"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between a function and a method in JavaScript?",
+              "options": [
+                "A function is a reusable block of code, while a method is a function within an object",
+                "A function is a function within an object, while a method is a reusable block of code",
+                "A function is a method within an object, while a method is a function outside an object",
+                "A function is a reusable block of code, while a method is a method within an object"
+              ],
+              "answer": "A function is a reusable block of code, while a method is a function within an object"
+            },
+            {
+              "question": "What is the purpose of the `this` keyword in JavaScript?",
+              "options": [
+                "To reference the current function",
+                "To reference the current object",
+                "To reference the global object",
+                "To reference the current variable"
+              ],
+              "answer": "To reference the current object"
+            },
+            {
+              "question": "What is the purpose of the `arguments` object in JavaScript?",
+              "options": [
+                "To store the function's arguments",
+                "To store the object's properties",
+                "To store the current variable's value",
+                "To store the function's properties"
+              ],
+              "answer": "To store the function's arguments"
+            },
+            {
+              "question": "What is the purpose of the `apply` method in JavaScript?",
+              "options": [
+                "To call a function with a specified `this` value and arguments provided as an array",
+                "To call a function with a specified `this` value and arguments provided as an object",
+                "To call a function with a specified `this` value and arguments provided as a function",
+                "To call a function with a specified `this` value and no arguments"
+              ],
+              "answer": "To call a function with a specified `this` value and arguments provided as an array"
+            },
+            {
+              "question": "What is the difference between a `function` and a `method` in JavaScript?",
+              "options": [
+                "A function is a standalone block of code, while a method is a function that is part of an object",
+                "A function is a part of an object, while a method is a standalone block of code",
+                "A function is used for calculations, while a method is used for data manipulation",
+                "A function is used for event handling, while a method is used for animation"
+              ],
+              "answer": "A function is a standalone block of code, while a method is a function that is part of an object"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between a function and a method in JavaScript?",
+              "options": [
+                "A function is a reusable block of code, while a method is a function within an object",
+                "A function is a function within an object, while a method is a reusable block of code",
+                "A function is a method within an object, while a method is a function outside an object",
+                "A function is a reusable block of code, while a method is a method within an object"
+              ],
+              "answer": "A function is a reusable block of code, while a method is a function within an object"
+            },
+            {
+              "question": "What is the purpose of the `this` keyword in JavaScript?",
+              "options": [
+                "To reference the current function",
+                "To reference the current object",
+                "To reference the global object",
+                "To reference the current variable"
+              ],
+              "answer": "To reference the current object"
+            },
+            {
+              "question": "What is the purpose of the `arguments` object in JavaScript?",
+              "options": [
+                "To store the function's arguments",
+                "To store the object's properties",
+                "To store the current variable's value",
+                "To store the function's properties"
+              ],
+              "answer": "To store the function's arguments"
+            },
+            {
+              "question": "What is the purpose of the `apply` method in JavaScript?",
+              "options": [
+                "To call a function with a specified `this` value and arguments provided as an array",
+                "To call a function with a specified `this` value and arguments provided as an object",
+                "To call a function with a specified `this` value and arguments provided as a function",
+                "To call a function with a specified `this` value and no arguments"
+              ],
+              "answer": "To call a function with a specified `this` value and arguments provided as an array"
+            },
+            {
+              "question": "What is the difference between a `function` and a `method` in JavaScript?",
+              "options": [
+                "A function is a standalone block of code, while a method is a function that is part of an object",
+                "A function is a part of an object, while a method is a standalone block of code",
+                "A function is used for calculations, while a method is used for data manipulation",
+                "A function is used for event handling, while a method is used for animation"
+              ],
+              "answer": "A function is a standalone block of code, while a method is a function that is part of an object"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between a function and a method in JavaScript?",
+              "options": [
+                "A function is a reusable block of code, while a method is a function within an object",
+                "A function is a function within an object, while a method is a reusable block of code",
+                "A function is a method within an object, while a method is a function outside an object",
+                "A function is a reusable block of code, while a method is a method within an object"
+              ],
+              "answer": "A function is a reusable block of code, while a method is a function within an object"
+            },
+            {
+              "question": "What is the purpose of the `this` keyword in JavaScript?",
+              "options": [
+                "To reference the current function",
+                "To reference the current object",
+                "To reference the global object",
+                "To reference the current variable"
+              ],
+              "answer": "To reference the current object"
+            },
+            {
+              "question": "What is the purpose of the `arguments` object in JavaScript?",
+              "options": [
+                "To store the function's arguments",
+                "To store the object's properties",
+                "To store the current variable's value",
+                "To store the function's properties"
+              ],
+              "answer": "To store the function's arguments"
+            },
+            {
+              "question": "What is the purpose of the `apply` method in JavaScript?",
+              "options": [
+                "To call a function with a specified `this` value and arguments provided as an array",
+                "To call a function with a specified `this` value and arguments provided as an object",
+                "To call a function with a specified `this` value and arguments provided as a function",
+                "To call a function with a specified `this` value and no arguments"
+              ],
+              "answer": "To call a function with a specified `this` value and arguments provided as an array"
+            },
+            {
+              "question": "What is the difference between a `function` and a `method` in JavaScript?",
+              "options": [
+                "A function is a standalone block of code, while a method is a function that is part of an object",
+                "A function is a part of an object, while a method is a standalone block of code",
+                "A function is used for calculations, while a method is used for data manipulation",
+                "A function is used for event handling, while a method is used for animation"
+              ],
+              "answer": "A function is a standalone block of code, while a method is a function that is part of an object"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between a function and a method in JavaScript?",
+              "options": [
+                "A function is a reusable block of code, while a method is a function within an object",
+                "A function is a function within an object, while a method is a reusable block of code",
+                "A function is a method within an object, while a method is a function outside an object",
+                "A function is a reusable block of code, while a method is a method within an object"
+              ],
+              "answer": "A function is a reusable block of code, while a method is a function within an object"
+            },
+            {
+              "question": "What is the purpose of the `this` keyword in JavaScript?",
+              "options": [
+                "To reference the current function",
+                "To reference the current object",
+                "To reference the global object",
+                "To reference the current variable"
+              ],
+              "answer": "To reference the current object"
+            },
+            {
+              "question": "What is the purpose of the `arguments` object in JavaScript?",
+              "options": [
+                "To store the function's arguments",
+                "To store the object's properties",
+                "To store the current variable's value",
+                "To store the function's properties"
+              ],
+              "answer": "To store the function's arguments"
+            },
+            {
+              "question": "What is the purpose of the `apply` method in JavaScript?",
+              "options": [
+                "To call a function with a specified `this` value and arguments provided as an array",
+                "To call a function with a specified `this` value and arguments provided as an object",
+                "To call a function with a specified `this` value and arguments provided as a function",
+                "To call a function with a specified `this` value and no arguments"
+              ],
+              "answer": "To call a function with a specified `this` value and arguments provided as an array"
+            },
+            {
+              "question": "What is the difference between a `function` and a `method` in JavaScript?",
+              "options": [
+                "A function is a standalone block of code, while a method is a function that is part of an object",
+                "A function is a part of an object, while a method is a standalone block of code",
+                "A function is used for calculations, while a method is used for data manipulation",
+                "A function is used for event handling, while a method is used for animation"
+              ],
+              "answer": "A function is a standalone block of code, while a method is a function that is part of an object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Python",
+      "levels": [
+        {
+          "id": 1,
+          "questions": [
+            {
+              "question": "What is Python?",
+              "options": [
+                "Python is a high-level programming language known for its simplicity and readability",
+                "Python is a markup language used for creating web pages",
+                "Python is a database language used for managing data",
+                "Python is a scripting language used for automating tasks"
+              ],
+              "answer": "Python is a high-level programming language known for its simplicity and readability"
+            },
+            {
+              "question": "What is a list comprehension in Python?",
+              "options": [
+                "A concise way to create lists using a single line of code",
+                "A method to define functions",
+                "A technique to handle exceptions",
+                "A way to import modules"
+              ],
+              "answer": "A concise way to create lists using a single line of code"
+            },
+            {
+              "question": "What is the purpose of the 'self' keyword in Python?",
+              "options": [
+                "It refers to the instance of the class",
+                "It is used to declare global variables",
+                "It is used to define static methods",
+                "It is used to return values from functions"
+              ],
+              "answer": "It refers to the instance of the class"
+            },
+            {
+              "question": "What is the difference between 'append()' and 'extend()' methods in Python?",
+              "options": [
+                "'append()' adds a single element to a list, while 'extend()' adds multiple elements",
+                "'append()' adds multiple elements, while 'extend()' adds a single element",
+                "'append()' is used for strings, while 'extend()' is used for lists",
+                "'append()' modifies the original list, while 'extend()' creates a new list"
+              ],
+              "answer": "'append()' adds a single element to a list, while 'extend()' adds multiple elements"
+            },
+            {
+              "question": "How do you handle exceptions in Python?",
+              "options": [
+                "Using the 'try' and 'except' blocks",
+                "Using the 'if' and 'else' statements",
+                "Using the 'for' and 'while' loops",
+                "Using the 'import' and 'from' statements"
+              ],
+              "answer": "Using the 'try' and 'except' blocks"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `list` and `tuple` in Python?",
+              "options": [
+                "A list is mutable, while a tuple is immutable",
+                "A list is immutable, while a tuple is mutable",
+                "A list is used for strings, while a tuple is used for numbers",
+                "A list is usedfor arrays, while a tuple is used for objects"
+              ],
+              "answer": "A list is mutable, while a tuple is immutable"
+            },
+            {
+              "question": "What is the purpose of the `__init__` method in Python?",
+              "options": [
+                "To initialize the object's state",
+                "To define the object's methods",
+                "To define the object's properties",
+                "To define the object's constructor"
+              ],
+              "answer": "To initialize the object's state"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "What is the difference between `is` and `==` operators in Python?",
+                "The `is` operator checks for object identity, while the `==` operator checks for value equality",
+                "The `is` operator checks for value equality, while the `==` operator checks for object identity",
+                "The `is` operator is used for strings, while the `==` operator is used for numbers",
+                "The `is` operator is used for arrays, while the `==` operator is used for objects"
+              ],
+              "answer": "The `is` operator checks for object identity, while the `==` operator checks for value equality"
+            },
+            {
+              "question": "How do you handle exceptions in Python?",
+              "options": [
+                "Using the 'try' and 'except' blocks",
+                "Using the 'if' and 'else' statements",
+                "Using the 'for' and 'while' loops",
+                "Using the 'import' and 'from' statements"
+              ],
+              "answer": "Using the 'try' and 'except' blocks"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `list` and `tuple` in Python?",
+              "options": [
+                "A list is mutable, while a tuple is immutable",
+                "A list is immutable, while a tuple is mutable",
+                "A list is used for strings, while a tuple is used for numbers",
+                "A list is usedfor arrays, while a tuple is used for objects"
+              ],
+              "answer": "A list is mutable, while a tuple is immutable"
+            },
+            {
+              "question": "What is the purpose of the `__init__` method in Python?",
+              "options": [
+                "To initialize the object's state",
+                "To define the object's methods",
+                "To define the object's properties",
+                "To define the object's constructor"
+              ],
+              "answer": "To initialize the object's state"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "What is the difference between `is` and `==` operators in Python?",
+                "The `is` operator checks for object identity, while the `==` operator checks for value equality",
+                "The `is` operator checks for value equality, while the `==` operator checks for object identity",
+                "The `is` operator is used for strings, while the `==` operator is used for numbers",
+                "The `is` operator is used for arrays, while the `==` operator is used for objects"
+              ],
+              "answer": "The `is` operator checks for object identity, while the `==` operator checks for value equality"
+            },
+            {
+              "question": "How do you handle exceptions in Python?",
+              "options": [
+                "Using the 'try' and 'except' blocks",
+                "Using the 'if' and 'else' statements",
+                "Using the 'for' and 'while' loops",
+                "Using the 'import' and 'from' statements"
+              ],
+              "answer": "Using the 'try' and 'except' blocks"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `list` and `tuple` in Python?",
+              "options": [
+                "A list is mutable, while a tuple is immutable",
+                "A list is immutable, while a tuple is mutable",
+                "A list is used for strings, while a tuple is used for numbers",
+                "A list is usedfor arrays, while a tuple is used for objects"
+              ],
+              "answer": "A list is mutable, while a tuple is immutable"
+            },
+            {
+              "question": "What is the purpose of the `__init__` method in Python?",
+              "options": [
+                "To initialize the object's state",
+                "To define the object's methods",
+                "To define the object's properties",
+                "To define the object's constructor"
+              ],
+              "answer": "To initialize the object's state"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "What is the difference between `is` and `==` operators in Python?",
+                "The `is` operator checks for object identity, while the `==` operator checks for value equality",
+                "The `is` operator checks for value equality, while the `==` operator checks for object identity",
+                "The `is` operator is used for strings, while the `==` operator is used for numbers",
+                "The `is` operator is used for arrays, while the `==` operator is used for objects"
+              ],
+              "answer": "The `is` operator checks for object identity, while the `==` operator checks for value equality"
+            },
+            {
+              "question": "How do you handle exceptions in Python?",
+              "options": [
+                "Using the 'try' and 'except' blocks",
+                "Using the 'if' and 'else' statements",
+                "Using the 'for' and 'while' loops",
+                "Using the 'import' and 'from' statements"
+              ],
+              "answer": "Using the 'try' and 'except' blocks"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `list` and `tuple` in Python?",
+              "options": [
+                "A list is mutable, while a tuple is immutable",
+                "A list is immutable, while a tuple is mutable",
+                "A list is used for strings, while a tuple is used for numbers",
+                "A list is usedfor arrays, while a tuple is used for objects"
+              ],
+              "answer": "A list is mutable, while a tuple is immutable"
+            },
+            {
+              "question": "What is the purpose of the `__init__` method in Python?",
+              "options": [
+                "To initialize the object's state",
+                "To define the object's methods",
+                "To define the object's properties",
+                "To define the object's constructor"
+              ],
+              "answer": "To initialize the object's state"
+            },
+            {
+              "question": "What is the purpose of the `alt` attribute in HTML?",
+              "options": [
+                "What is the difference between `is` and `==` operators in Python?",
+                "The `is` operator checks for object identity, while the `==` operator checks for value equality",
+                "The `is` operator checks for value equality, while the `==` operator checks for object identity",
+                "The `is` operator is used for strings, while the `==` operator is used for numbers",
+                "The `is` operator is used for arrays, while the `==` operator is used for objects"
+              ],
+              "answer": "The `is` operator checks for object identity, while the `==` operator checks for value equality"
+            },
+            {
+              "question": "How do you handle exceptions in Python?",
+              "options": [
+                "Using the 'try' and 'except' blocks",
+                "Using the 'if' and 'else' statements",
+                "Using the 'for' and 'while' loops",
+                "Using the 'import' and 'from' statements"
+              ],
+              "answer": "Using the 'try' and 'except' blocks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Android",
+      "levels": [
+        {
+          "questions": [
+            {
+              "question": "What is Android?",
+              "options": [
+                "Android is an operating system designed for mobile devices, based on the Linux kernel",
+                "Android is a programming language used for building web applications",
+                "Android is a development framework for creating desktop applications",
+                "Android is a database management system"
+              ],
+              "answer": "Android is an operating system designed for mobile devices, based on the Linux kernel"
+            },
+            {
+              "question": "What is an Activity in Android?",
+              "options": [
+                "An Activity is a single screen with a user interface",
+                "An Activity is a background process that runs independently",
+                "An Activity is a data container used to store information",
+                "An Activity is a network communication component"
+              ],
+              "answer": "An Activity is a single screen with a user interface"
+            },
+            {
+              "question": "What is an Intent in Android?",
+              "options": [
+                "An Intent is a messaging object that is used to request an action from another component",
+                "An Intent is a layout file that defines the user interface of an Activity",
+                "An Intent is a data structure used to store key-value pairs",
+                "An Intent is a database query used to retrieve information"
+              ],
+              "answer": "An Intent is a messaging object that is used to request an action from another component"
+            },
+            {
+              "question": "What is a Fragment in Android?",
+              "options": [
+                "A Fragment is a modular section of an Activity, representing a portion of user interface and logic",
+                "A Fragment is a background thread that performs long-running operations",
+                "A Fragment is a collection of key-value pairs used for storing data",
+                "A Fragment is a network communication component"
+              ],
+              "answer": "A Fragment is a modular section of an Activity, representing a portion of user interface and logic"
+            },
+            {
+              "question": "What is the layout file in Android?",
+              "options": [
+                "A layout file defines the user interface of an Activity or Fragment using XML",
+                "A layout file is a file that contains the executable code of an Android application",
+                "A layout file is a file used for storing data in a structured format",
+                "A layout file is a file that defines the database schema"
+              ],
+              "answer": "A layout file defines the user interface of an Activity or Fragment using XML"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `startActivity()` and `startActivityForResult()` methods in Android?",
+              "options": [
+                "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result",
+                "The `startActivity()` method is used to wait for a result, while the `startActivityForResult()` method is used to start a new `Activity`",
+                "The `startActivity()` method is used for strings, while the `startActivityForResult()` method is used for numbers",
+                "The `startActivity()` method is used for arrays, while the `startActivityForResult()` method is used for objects"
+              ],
+              "answer": "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result"
+            },
+            {
+              "question": "What is the purpose of the `onSaveInstanceState()` method in Android?",
+              "options": [
+                "To save the state of an `Activity` before it is destroyed",
+                "To define the layout of an `Activity`",
+                "To define the properties of a view",
+                "To define the behavior of a button"
+              ],
+              "answer": "To save the state of an `Activity` before it is destroyed"
+            },
+            {
+              "question": "What is the difference between `findViewById()` and `findViewWithTag()` methods in Android?",
+              "options": [
+                "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag",
+                "The `findViewById()` method is used to find a view by its tag, while the `findViewWithTag()` method is used to find a view by its ID",
+                "The `findViewById()` method is used for strings, while the `findViewWithTag()` method is used for numbers",
+                "The `findViewById()` method is used for arrays, while the `findViewWithTag()` method is used for objects"
+              ],
+              "answer": "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag"
+            },
+            {
+              "question": "What is the layout file in Android?",
+              "options": [
+                "A layout file defines the user interface of an Activity or Fragment using XML",
+                "A layout file is a file that contains the executable code of an Android application",
+                "A layout file is a file used for storing data in a structured format",
+                "A layout file is a file that defines the database schema"
+              ],
+              "answer": "A layout file defines the user interface of an Activity or Fragment using XML"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `startActivity()` and `startActivityForResult()` methods in Android?",
+              "options": [
+                "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result",
+                "The `startActivity()` method is used to wait for a result, while the `startActivityForResult()` method is used to start a new `Activity`",
+                "The `startActivity()` method is used for strings, while the `startActivityForResult()` method is used for numbers",
+                "The `startActivity()` method is used for arrays, while the `startActivityForResult()` method is used for objects"
+              ],
+              "answer": "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result"
+            },
+            {
+              "question": "What is the purpose of the `onSaveInstanceState()` method in Android?",
+              "options": [
+                "To save the state of an `Activity` before it is destroyed",
+                "To define the layout of an `Activity`",
+                "To define the properties of a view",
+                "To define the behavior of a button"
+              ],
+              "answer": "To save the state of an `Activity` before it is destroyed"
+            },
+            {
+              "question": "What is the difference between `findViewById()` and `findViewWithTag()` methods in Android?",
+              "options": [
+                "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag",
+                "The `findViewById()` method is used to find a view by its tag, while the `findViewWithTag()` method is used to find a view by its ID",
+                "The `findViewById()` method is used for strings, while the `findViewWithTag()` method is used for numbers",
+                "The `findViewById()` method is used for arrays, while the `findViewWithTag()` method is used for objects"
+              ],
+              "answer": "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag"
+            },
+            {
+              "question": "What is the layout file in Android?",
+              "options": [
+                "A layout file defines the user interface of an Activity or Fragment using XML",
+                "A layout file is a file that contains the executable code of an Android application",
+                "A layout file is a file used for storing data in a structured format",
+                "A layout file is a file that defines the database schema"
+              ],
+              "answer": "A layout file defines the user interface of an Activity or Fragment using XML"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `startActivity()` and `startActivityForResult()` methods in Android?",
+              "options": [
+                "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result",
+                "The `startActivity()` method is used to wait for a result, while the `startActivityForResult()` method is used to start a new `Activity`",
+                "The `startActivity()` method is used for strings, while the `startActivityForResult()` method is used for numbers",
+                "The `startActivity()` method is used for arrays, while the `startActivityForResult()` method is used for objects"
+              ],
+              "answer": "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result"
+            },
+            {
+              "question": "What is the purpose of the `onSaveInstanceState()` method in Android?",
+              "options": [
+                "To save the state of an `Activity` before it is destroyed",
+                "To define the layout of an `Activity`",
+                "To define the properties of a view",
+                "To define the behavior of a button"
+              ],
+              "answer": "To save the state of an `Activity` before it is destroyed"
+            },
+            {
+              "question": "What is the difference between `findViewById()` and `findViewWithTag()` methods in Android?",
+              "options": [
+                "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag",
+                "The `findViewById()` method is used to find a view by its tag, while the `findViewWithTag()` method is used to find a view by its ID",
+                "The `findViewById()` method is used for strings, while the `findViewWithTag()` method is used for numbers",
+                "The `findViewById()` method is used for arrays, while the `findViewWithTag()` method is used for objects"
+              ],
+              "answer": "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag"
+            },
+            {
+              "question": "What is the layout file in Android?",
+              "options": [
+                "A layout file defines the user interface of an Activity or Fragment using XML",
+                "A layout file is a file that contains the executable code of an Android application",
+                "A layout file is a file used for storing data in a structured format",
+                "A layout file is a file that defines the database schema"
+              ],
+              "answer": "A layout file defines the user interface of an Activity or Fragment using XML"
+            }
+          ]
+        },
+        {
+          "questions": [
+            {
+              "question": "What is the difference between `startActivity()` and `startActivityForResult()` methods in Android?",
+              "options": [
+                "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result",
+                "The `startActivity()` method is used to wait for a result, while the `startActivityForResult()` method is used to start a new `Activity`",
+                "The `startActivity()` method is used for strings, while the `startActivityForResult()` method is used for numbers",
+                "The `startActivity()` method is used for arrays, while the `startActivityForResult()` method is used for objects"
+              ],
+              "answer": "The `startActivity()` method is used to start a new `Activity`, while the `startActivityForResult()` method is used to start a new `Activity` and wait for a result"
+            },
+            {
+              "question": "What is the purpose of the `onSaveInstanceState()` method in Android?",
+              "options": [
+                "To save the state of an `Activity` before it is destroyed",
+                "To define the layout of an `Activity`",
+                "To define the properties of a view",
+                "To define the behavior of a button"
+              ],
+              "answer": "To save the state of an `Activity` before it is destroyed"
+            },
+            {
+              "question": "What is the difference between `findViewById()` and `findViewWithTag()` methods in Android?",
+              "options": [
+                "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag",
+                "The `findViewById()` method is used to find a view by its tag, while the `findViewWithTag()` method is used to find a view by its ID",
+                "The `findViewById()` method is used for strings, while the `findViewWithTag()` method is used for numbers",
+                "The `findViewById()` method is used for arrays, while the `findViewWithTag()` method is used for objects"
+              ],
+              "answer": "The `findViewById()` method is used to find a view by its ID, while the `findViewWithTag()` method is used to find a view by its tag"
+            },
+            {
+              "question": "What is the layout file in Android?",
+              "options": [
+                "A layout file defines the user interface of an Activity or Fragment using XML",
+                "A layout file is a file that contains the executable code of an Android application",
+                "A layout file is a file used for storing data in a structured format",
+                "A layout file is a file that defines the database schema"
+              ],
+              "answer": "A layout file defines the user interface of an Activity or Fragment using XML"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

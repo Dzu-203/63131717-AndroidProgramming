@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "2795151052",
+    "firebase_url": "https://dataquizandroid-default-rtdb.firebaseio.com",
+    "project_id": "dataquizandroid",
+    "storage_bucket": "dataquizandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2795151052:android:20fb182f1bdb042b592c69",
+        "android_client_info": {
+          "package_name": "ntu.mssv63131717"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0wvO6DhFPyUYYBqsjzW5R2GlDhJ9kRx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

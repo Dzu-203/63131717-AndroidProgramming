@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray">#CCC</color>
+    <color name="black">#000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backg">#11B3D9</color>
+    <color name="backgDark">#232222</color>
+    <color name="category">#e8e4fa</color>
+    <color name="click">#F694A5</color>
+    <color name="ques">#618FEC</color>
+    <color name="border">#3F51B5</color>
+    <color name="text3">#333333</color>
+</resources>
