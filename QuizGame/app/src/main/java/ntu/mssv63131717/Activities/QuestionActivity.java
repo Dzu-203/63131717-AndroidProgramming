@@ -24,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import ntu.mssv63131717.Fragments.CourseFragment;
 import ntu.mssv63131717.Models.Question;
 import ntu.mssv63131717.R;
 import ntu.mssv63131717.databinding.ActivityQuestionBinding;
@@ -84,7 +85,7 @@ public class QuestionActivity extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                setupCourse(snapshot);
+                getDataCourse(snapshot);
                 setupQuestionUI();
                 resetTime();
                 countDownTimer.start();
@@ -97,17 +98,17 @@ public class QuestionActivity extends AppCompatActivity {
         });
     }
 
-    private void setupCourse(DataSnapshot snapshot) {
+    private void getDataCourse(DataSnapshot snapshot) {
         for (DataSnapshot courseSnapshot : snapshot.getChildren()) {
             String courseName = courseSnapshot.child("name").getValue(String.class);
             if (courseName != null && courseName.equals(course)) {
-                setupLevel(courseSnapshot.child("levels"));
+                getDataLevel(courseSnapshot.child("levels"));
                 break;
             }
         }
     }
 
-    private void setupLevel(DataSnapshot snapshot) {
+    private void getDataLevel(DataSnapshot snapshot) {
         try {
             int levelIndex = Integer.parseInt(level.replace("Level ", "")) - 1;
             getDataQuestions(snapshot.child(String.valueOf(levelIndex)).child("questions"));
@@ -168,7 +169,7 @@ public class QuestionActivity extends AppCompatActivity {
         dialog.findViewById(R.id.again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuestionActivity.this, LevelActivity.class);
+                Intent intent = new Intent(QuestionActivity.this, CourseFragment.class);
                 startActivity(intent);
                 finish();
             }
@@ -203,13 +204,13 @@ public class QuestionActivity extends AppCompatActivity {
             view.setEnabled(enable);
             view.setBackgroundResource(R.drawable.custom_button);
             if (view instanceof Button) {
-                ((Button) view).setTextColor(ResourcesCompat.getColor(getResources(), R.color.text3, null));
+                ((Button) view).setTextColor(Color.WHITE);
             }
         }
     }
 
     private void animateQuestion(View view, int value, String data) {
-        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500).setStartDelay(100)
+        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(300).setStartDelay(0)
                 .setInterpolator(new DecelerateInterpolator()).setListener(new Animator.AnimatorListener() {
                     @Override
                     public void onAnimationStart(@NonNull Animator animation) {

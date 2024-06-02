@@ -35,23 +35,17 @@ public class LevelActivity extends AppCompatActivity {
         binding = ActivityLevelBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         course = getIntent().getStringExtra("course");
-
-        // Khởi tạo danh sách listLevel
         listLevel = new ArrayList<>();
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.recyclerLevel.setLayoutManager(layoutManager);
         levelAdapter = new LevelAdapter(this, listLevel, course);
         binding.recyclerLevel.setAdapter(levelAdapter);
 
-        // Gọi phương thức GetData để lấy dữ liệu levels
         GetData(new DataLoadedCallbackLevel() {
             @Override
             public void onDataLoaded(ArrayList<Level> data) {
                 listLevel.addAll(data);
                 levelAdapter.notifyDataSetChanged();
-
-                // Cập nhật tổng số level và số lượng câu hỏi
                 binding.totalLevel.setText(String.valueOf(listLevel.size()));
                 binding.totalQues.setText(String.valueOf(listLevel.size() * 5));
             }
@@ -88,7 +82,7 @@ public class LevelActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Xử lý khi có lỗi
+                Toast.makeText(LevelActivity.this, "Lỗi lấy level", Toast.LENGTH_SHORT).show();
             }
         });
     }

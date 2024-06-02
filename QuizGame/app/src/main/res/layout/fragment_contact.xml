@@ -46,7 +46,7 @@
             android:layout_marginStart="25dp"
             android:text="HOÀNG VŨ"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,9 +66,9 @@
 
         <ImageView
             android:id="@+id/fb"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="32dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="64dp"
             android:layout_marginTop="32dp"
             android:src="@drawable/facebook"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,19 +76,21 @@
 
         <ImageView
             android:id="@+id/tik"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/tiktok"
             app:layout_constraintBottom_toBottomOf="@+id/fb"
             app:layout_constraintEnd_toStartOf="@+id/git"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toEndOf="@+id/fb"
-            app:layout_constraintTop_toTopOf="@+id/fb" />
+            app:layout_constraintTop_toTopOf="@+id/fb"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/git"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="32dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="64dp"
             android:src="@drawable/github"
             app:layout_constraintBottom_toBottomOf="@+id/tik"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,8 +98,8 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="375dp"
+            android:layout_height="147dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
@@ -127,7 +129,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="or"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
